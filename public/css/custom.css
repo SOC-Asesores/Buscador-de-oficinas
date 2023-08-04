@@ -1,0 +1,69 @@
+/*
+ * Custom code goes here.
+ */
+@import '../fonts/museo-sans/museo-sans.css';
+:root {
+	/* Colors: */
+	--primary-color: #015694;
+	--secundary-color: #4AA84F;
+	--tertiary-color: #4AA84F;
+
+	--skyblue-color: #2AB5DF;
+	--white-smoke-color: #F1F2F7;
+	--wet-asphalt-color: #40516F;
+	--nobel-color: #9B9A9A;
+}
+body{
+	font-family: 'Museo Sans', 'Montserrat', 'Muli', sans-serif; }
+
+/*
+ * Colores
+ */
+.text-primary{
+	color: var(--primary-color); }
+.bg-primary{
+	background-color: var(--primary-color); }
+.border-primary{
+	border-color: var(--primary-color); }
+
+.text-secundary{
+	color: var(--secundary-color); }
+.bg-secundary{
+	background-color: var(--secundary-color); }
+.border-secundary{
+	border-color: var(--secundary-color); }
+
+.text-tertiary{
+	color: var(--tertiary-color); }
+.bg-tertiary{
+	background-color: var(--tertiary-color); }
+.border-tertiary{
+	border-color: var(--tertiary-color); }
+
+.text-skyblue{
+	color: var(--skyblue-color); }
+.bg-skyblue{
+	background-color: var(--skyblue-color); }
+.border-skyblue{
+	border-color: var(--skyblue-color); }
+
+.text-white-smoke{
+	color: var(--white-smoke-color); }
+.bg-white-smoke{
+	background-color: var(--white-smoke-color); }
+.border-white-smoke{
+	border-color: var(--white-smoke-color); }
+
+.text-wet-asphalt{
+	color: var(--wet-asphalt-color); }
+.bg-wet-asphalt{
+	background-color: var(--wet-asphalt-color); }
+.border-wet-asphalt{
+	border-color: var(--wet-asphalt-color); }
+
+.text-nobel{
+	color: var(--nobel-color); }
+.bg-nobel{
+	background-color: var(--nobel-color); }
+.border-nobel{
+	border-color: var(--nobel-color); }
