@@ -8,6 +8,7 @@ use App\Models\UserAsesores;
 use App\Models\Fotos;
 use App\Models\Servicios;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Auth;
 use GuzzleHttp\Client;
@@ -528,6 +529,7 @@ class micrositiosController extends Controller
                             }
                             
                         }else{
+
                              return view('micrositio_empresarial',['registro' => $registro[0]]);
                         }
                     }
@@ -543,9 +545,27 @@ class micrositiosController extends Controller
                     ['estado_seo', '=', $estado],
                     ['ciudad_seo', '=', $ciudad]
                 ])->get();
-                return view('micrositio_hipotecario',['registro' => $registro[0]]);
+
+
+                 if($registro[0]["place_id"] != null){
+                        $reviews = Http::get('https://maps.googleapis.com/maps/api/place/details/json?place_id='.$registro[0]["place_id"].'&key=AIzaSyCeaHvmVaf68SRKhVbkuXqx1FJtRiApXvw&language=es');
+                        $reviews = $reviews->object()->result;
+                        return view('micrositio_hipotecario',['registro' => $registro[0],'reviews'=> $reviews]);
+                    }else{
+                        return view('micrositio_hipotecario',['registro' => $registro[0]]);
+                    }
+
+               
         }else{
-             return view('micrositio_hipotecario',['registro' => $registro[0]]);
+            if($registro[0]["place_id"] != null){
+                        $reviews = Http::get('https://maps.googleapis.com/maps/api/place/details/json?place_id='.$registro[0]["place_id"].'&key=AIzaSyCeaHvmVaf68SRKhVbkuXqx1FJtRiApXvw&language=es');
+                        $reviews = $reviews->object()->result;
+                        return view('micrositio_hipotecario',['registro' => $registro[0],'reviews'=> $reviews]);
+                    }else{
+                      
+                        return view('micrositio_hipotecario',['registro' => $registro[0]]);
+                    }
+             
         }
 
 

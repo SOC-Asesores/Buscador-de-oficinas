@@ -27,6 +27,9 @@ Route::post('/micrositios/all','App\Http\Controllers\micrositiosController@getAl
 Route::post('/micrositios/search','App\Http\Controllers\micrositiosController@search')->name('searchMicrositios');
 Route::post('/asesores/all','App\Http\Controllers\micrositiosAsesoresController@getAll')->name('getAllAsesores');
 Route::post('/asesores/search','App\Http\Controllers\micrositiosAsesoresController@searchAsesores')->name('searchAsesores');
+Route::get('/estado-de-mexico/tultepec/worldwide-financial-b', function () {
+    return redirect('/estado-de-mexico/tultepec/worldwide-financial-b&c');
+});
 Route::get('/{estado}/{ciudad}/{oficina}','App\Http\Controllers\micrositiosController@oficina');
 Route::post('/sendmail','App\Http\Controllers\micrositiosController@sendMail')->name('sendMail');
 Route::post('/sendmail2','App\Http\Controllers\micrositiosController@sendMail2')->name('sendMail2');

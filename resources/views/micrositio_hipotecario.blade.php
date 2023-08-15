@@ -20,6 +20,7 @@
     <link rel="stylesheet" type="text/css" href="{{ url('https://socasesores.com/micrositios/css/slick.css') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ url('https://socasesores.com/micrositios/css/slick-theme.css') }}"/>
     <link rel="stylesheet" href="{{ url('https://socasesores.com/micrositios/css/app.css') }}">
+    <script src="https://kit.fontawesome.com/ab58011517.js" crossorigin="anonymous"></script>
     @php
                                      $split_name = explode("-", $registro->name);
                                      $productos_seo = str_replace(",",", ",$registro->productos)
@@ -32,6 +33,10 @@
     <link rel="icon" type="image/png" href="https://socasesores.com/img/favicon.png">
     <style type="text/css">
       /* Set the size of the div element that contains the map */
+      .fa-star{
+        color: #FABD05;
+      }
+
       #map {
         height: 300px;
         /* The height is 400 pixels */
@@ -1019,10 +1024,10 @@ $oficinas = "";
                             <div class="col-lg-12 pasos info_1">
                                 <div class="row">
                                     <div class="col-12">
-                                        @if($registro->cotizador != null)
-                                            <iframe style="width: 100%; height: 731px; border: 0;" scrolling="yes" src="{{ $registro->cotizador }}" class="comparadorsocIframe"></iframe>
-                                        @elseif($registro->precalificar != null)
+                                        @if($registro->precalificar != null)
                                             <iframe style="width: 100%; height: 831px; border: 0;" scrolling="yes" src="{{ $registro->precalificar }}" class="comparadorsocIframe"></iframe>
+                                        @elseif($registro->cotizador != null)
+                                            <iframe style="width: 100%; height: 731px; border: 0;" scrolling="yes" src="{{ $registro->cotizador }}" class="comparadorsocIframe"></iframe>
                                         @endif
                                     </div>
                                 </div>
@@ -1565,7 +1570,7 @@ $oficinas = "";
                             <div class="col-12">
                                 @if($registro->pyme_tag != null)
                                     <h2 class="mb-4 mt-4">Precalificate</h2>
-                                    <iframe style="width: 100%; height: 831px; border: 0;" scrolling="yes" src="{{ $registro->pyme_tag }}" class="comparadorsocIframe"></iframe>
+                                    <iframe style="width: 100%; height: 831px; border: 0;background: #fff" scrolling="yes" src="{{ $registro->pyme_tag }}" class="comparadorsocIframe"></iframe>
                                 @else
                                 @endif
                                
@@ -1983,7 +1988,7 @@ $oficinas = "";
                             <div class="col-12">
                                 @if($registro->seguro_tag != null)
                                     <h2 class="mb-4 mt-4">Precalificate</h2>
-                                    <iframe style="width: 100%; height: 831px; border: 0;" scrolling="yes" src="{{ $registro->seguro_tag }}" class="comparadorsocIframe"></iframe>
+                                    <iframe style="width: 100%; height: 831px; border: 0;background: #fff" scrolling="yes" src="{{ $registro->seguro_tag }}" class="comparadorsocIframe"></iframe>
                                 @else
                                 @endif
                                
@@ -3347,8 +3352,8 @@ $oficinas = "";
                     </div>
                 </div>
             </section>
-            <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-<div class="elfsight-app-c424ebf8-e72a-4822-bf96-35718ab5d356"></div>
+           
+            
         @endif
 
         @if($registro->url_clean == "lofin")
@@ -3364,7 +3369,7 @@ $oficinas = "";
                 <div class="home-buttons">
                     <div class="container">
                         <div class="row justify-content-center">
-                            <div class="col-md-4 col-6 mb-4 asesor-card Merida">
+                            <div class="col-md-4 col-6 mb-4 asesor-card Merida" style="max-height: 100%;">
                                 <div class="content-button">
                                     <a href="https://socasesores.com/micrositios-asesores/ondina-amapola-chavez-hernandez" target="_blank">
                                     <p class="mb-0"><b>Amapola Chávez Hernández</b></p>
@@ -3375,7 +3380,7 @@ $oficinas = "";
                                 </a>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-6 mb-4 asesor-card Merida">
+                            <div class="col-md-4 col-6 mb-4 asesor-card Merida" style="max-height: 100%;">
                                 <div class="content-button">
                                     <a href="https://socasesores.com/micrositios-asesores/pablo-de-jesus-bermudez-ramirez" target="_blank">
                                     <p class="mb-0"><b>Pablo de Jesus Bermudez Ramirez</b></p>
@@ -3386,7 +3391,7 @@ $oficinas = "";
                                 </a>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-6 mb-4 asesor-card Merida">
+                            <div class="col-md-4 col-6 mb-4 asesor-card Merida" style="max-height: 100%;">
                                 <div class="content-button">
                                     <a href="https://socasesores.com/micrositios-asesores/evelin-flores-rodriguez" target="_blank">
                                     <p class="mb-0"><b>Evelin Flores Rodriguez</b></p>
@@ -3397,7 +3402,7 @@ $oficinas = "";
                                 </a>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-6 mb-4 asesor-card Merida">
+                            <div class="col-md-4 col-6 mb-4 asesor-card Merida" style="max-height: 100%;">
                                 <div class="content-button">
                                     <a href="https://socasesores.com/micrositios-asesores/brenda-guadalupe-diaz-noveron" target="_blank">
                                     <p class="mb-0"><b style="color: #4f4f4f">Brenda Guadalupe Diaz Noverón</b></p>
@@ -3408,7 +3413,7 @@ $oficinas = "";
                                 </a>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-6 mb-4 asesor-card Merida">
+                            <div class="col-md-4 col-6 mb-4 asesor-card Merida" style="max-height: 100%;">
                                 <div class="content-button">
                                     <a href="http://socasesores.com/micrositios-asesores/maria-guadalupe-chavez-hernandez" target="_blank">
                                     <p class="mb-0"><b>Maria Guadalupe Chávez Hernández</b></p>
@@ -3433,6 +3438,49 @@ $oficinas = "";
             </section>
         @endif
         
+         @if(isset($reviews))
+               <div class="container">
+                   <div class="row">
+                        <div class="col-12">
+                            <h2 class="text-center mb-4 pb-4">Sueños cumplidos</h2>
+                        </div>
+                        <div class="multiple-items mb-4 pb-4 col-12">
+                            @foreach($reviews->reviews as $opiniones)
+                                    <div class="d-flex flex-column">
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <img src="{{ $opiniones->profile_photo_url }}" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="col-9">
+                                                <p style="color: #006D4E; font-weight: bold; margin-bottom: 0">{{ $opiniones->author_name }}</p>
+                                                <p style="font-size: .8rem">{{ $opiniones->relative_time_description }}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                @if($opiniones->rating == 5)
+                                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                @elseif($opiniones->rating >= 4)
+                                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                @elseif($opiniones->rating >= 3)
+                                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                @elseif($opiniones->rating >= 2)
+                                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                @elseif($opiniones->rating >= 1)
+                                                    <i class="fa-solid fa-star"></i>
+                                                @else
+                                                @endif 
+                                                
+                                                <p style="font-size: .9rem">{{ $opiniones->text }}</p>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                            @endforeach
+                        </div>
+                   </div>
+               </div>
+        @endif
         @if($registro->type == 3)
             <section class="home-7">
                 <div class="container">
